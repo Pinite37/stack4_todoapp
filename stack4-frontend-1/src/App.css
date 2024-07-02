@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
+  width: 60%;
+  /* background: #333232; */
+  background: transparent;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  /* margin-top: 4rem;
+  margin-left: 20%; */
+  margin: 4rem auto;
+}
+
+.contain{
+  width: 85%;
+}
+
+.contain h1{
+  color: black;
+}
+
+.container .contain h1{
+  text-align: center;
+  justify-content: center;
+}
+
+
+.container .contain .formdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formdiv .form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #444;
+  padding-bottom: 2rem;
+  width: 90%;
+  gap : 1rem;
+}
+
+
+
+.formdiv .form input{
+  background: #f5f6f7;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ff9900;
+  border-radius: 10px;
+  display: block;
+  margin: 0.3rem 1rem 0 0;
+}
+
+.formdiv .form button{
+  background: rgb(62, 177, 62);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.taskitem{
+  display: flex;
+  background-color: #444;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskitem .titles{
+  display: flex;
+  flex-direction: column;
+  margin-right: 40%;
+}
+
+.taskitem .taskactions{
+  display: flex;
+  padding-top: 2rem;
+  gap: 1.5rem;
+  height: 2rem;
+}
+
+.taskitem .taskactions button{
+  background: rgb(62, 177, 62);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+
+.taskitem input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.taskitem input[type="checkbox"]:checked + h2,
+.taskitem input[type="checkbox"]:checked + p  {
+  text-decoration: line-through;
+  color: #888;
+}

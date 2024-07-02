@@ -1,0 +1,34 @@
+{% extends "layouts/app.html" %} 
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-4 justify-content-center">
+        <div class="col-sm-8">
+            <form action="{{ url_for('index', todo_id=todo['_id']) if todo else url_for('index') }}" method="POST">
+                <div class="input-group mb-3">
+                    <input type="text" name="title" placeholder="Entre votre texte" class="form-control" value="{{ todo['title'] if todo else '' }}">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-dark">Envoyer</button>
+                    </div>
+                </div>
+            </form>
+
+            {% for todo in todos %}
+
+            <div class="row mt-2">
+                <div class="col-8 ">{{ todo.title }}</div>
+                <div class="col-4 text-right">
+                    <a href="{{ url_for('index', todo_id=todo['_id']) }}" class="btn btn-dark btn-sm">Editer</a>
+                    <form class="d-inline" method="POST" action="{{ url_for('delete', todo_id=todo['_id']) }}">
+                        <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                    </form>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
